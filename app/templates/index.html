@@ -1,0 +1,98 @@
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div class="container">
+    <form method="POST", action="submit">
+        {% csrf_token %}
+        <h1>Enter ingredents of Your food</h1> <br>
+        item1: <input type="text" name='item1'> <br>
+        item2: <input type="text" name='item2'> <br>
+        item3: <input type="text" name="item3"> <br>
+        item4: <input type="text" name="item4"> <br>
+        <h1>Enter quantity of ingredents</h1> <br>
+        q1: <input type="text" name='q1'> <br>
+        q2: <input type="text" name='q2'> <br>
+        q3: <input type="text" name="q3"> <br>
+        q4: <input type="text" name="q4"> <br>
+
+        <button type="submit">submit</button>
+    </form>
+   </div>
+</body>
+</html> {% endcomment %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Ingredients Form</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <form method="POST" action="submit">
+            {% csrf_token %}
+            <h1 class="text-center mb-4">Enter Ingredients of Your Food</h1>
+
+            <div class="row mb-4">
+                <div class="col">
+                    <h3>Ingredients</h3>
+                    <div class="form-group">
+                        <label for="item1">Item 1:</label>
+                        <input type="text" class="form-control" name="item1" id="item1">
+                    </div>
+                    <div class="form-group">
+                        <label for="item2">Item 2:</label>
+                        <input type="text" class="form-control" name="item2" id="item2">
+                    </div>
+                    <div class="form-group">
+                        <label for="item3">Item 3:</label>
+                        <input type="text" class="form-control" name="item3" id="item3">
+                    </div>
+                    <div class="form-group">
+                        <label for="item4">Item 4:</label>
+                        <input type="text" class="form-control" name="item4" id="item4">
+                    </div>
+                </div>
+
+                <div class="col">
+                    <h3>Quantities in Gram</h3>
+                    <div class="form-group">
+                        <label for="q1">Quantity 1:</label>
+                        <input type="text" class="form-control" name="q1" id="q1">
+                    </div>
+                    <div class="form-group">
+                        <label for="q2">Quantity 2:</label>
+                        <input type="text" class="form-control" name="q2" id="q2">
+                    </div>
+                    <div class="form-group">
+                        <label for="q3">Quantity 3:</label>
+                        <input type="text" class="form-control" name="q3" id="q3">
+                    </div>
+                    <div class="form-group">
+                        <label for="q4">Quantity 4:</label>
+                        <input type="text" class="form-control" name="q4" id="q4">
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <button type="submit" class="btn btn-primary">Analyze</button>
+            </div>
+        </form>
+    </div>
+    
+    
+
+    <!-- Bootstrap JS and dependencies (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
