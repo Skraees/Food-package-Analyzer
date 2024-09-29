@@ -23,6 +23,8 @@ urlpatterns = [
     path('submit',views.submit ,name="submit"),
     path('signup',views.signup ,name="signup"),
     path('signin',views.signin ,name="signin"),
+    path('logout',views.signout ,name="logout"),
+
 
 
 

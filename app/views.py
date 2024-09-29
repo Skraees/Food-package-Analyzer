@@ -47,6 +47,9 @@ def signin(request):
 
     return render(request,'signin.html')
 
+def signout(request):
+    logout(request)
+    return redirect('signin')
 
 def submit(request):
     if request.method == 'POST':

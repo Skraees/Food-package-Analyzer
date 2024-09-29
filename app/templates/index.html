@@ -36,6 +36,12 @@
 </head>
 <body>
     <div class="container mt-5">
+        <form method="post" action="{% url 'logout' %}">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger">
+                Logout
+            </button>
+        </form>
         <form method="POST" action="submit">
             {% csrf_token %}
             <h1 class="text-center mb-4">Enter Ingredients of Your Food</h1>
